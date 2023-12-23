@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 150px;
   height: 100vh;
   font-family: League Spartan;
 
@@ -19,14 +19,123 @@ main {
   justify-content: space-between;
 }
 
+.top-left {
+  flex: 1;
+}
+
+.top-right {
+  flex: 1;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  padding-right: 200px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: hsl(303, 10%, 53%);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-right: 100px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.star img {
+  margin-right: 10px;
+}
+
+.star span {
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.star-center {
+  align-self: center;
+}
+
+.star-end {
+  align-self: flex-end;
+}
+
 .bottom {
   display: flex;
   justify-content: space-between;
+
+  gap: 30px;
+  margin-top: 30px;
+  height: 280px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+
+  background-color: hsl(300, 43%, 22%);
+  padding: 30px;
+  border-radius: 10px;
+  height: max-content;
+}
+
+.card-center {
+  align-self: center;
+}
+
+.card-bottom {
+  align-self: flex-end;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.header img {
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 20px;
+}
+
+.header .name {
+  color: white;
+  font-weight: 700;
+}
+
+.header span {
+  color: hsl(333, 80%, 67%);
+  font-weight: 400;
+}
+
+.review {
+  color: white;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -44,4 +153,103 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  body {
+    margin: 0;
+    width: 100vh;
+    min-height: 100vh;
+    padding-top: 100px;
+    
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    width: 85%;
+    margin-bottom: 658px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .title,
+  .subtitle {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .title {
+    margin-top: 0;
+    width: 80%;
+    margin: auto;
+  }
+
+  .subtitle {
+    margin: auto;
+    margin-top: 20px;
+    font-size: 28px;
+  }
+
+  .top-right {
+    align-items: center;
+  }
+
+  .stars img {
+    width: 20px;
+  }
+
+  .star {
+    flex-direction: column;
+
+    font-size: 28px;
+  }
+
+  .star-left,
+  .star-center,
+  .star-end {
+    width: 460px;
+    align-self: stretch;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+    margin: auto;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+  }
+
+  .card img {
+    width: 80px;
+  }
+
+  .header {
+    align-self: flex-start;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
 }
